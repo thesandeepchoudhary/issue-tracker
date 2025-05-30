@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body classNames={inter.variable}>
         <QueryClientProvider>
           <AuthProvider>
             <Provider>
