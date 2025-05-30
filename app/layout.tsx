@@ -31,7 +31,7 @@ export default function RootLayout({
         <QueryClientProvider>
           <AuthProvider>
             <Provider>
-              <ManagedProvider>{children}</ManagedProvider>
+              <ManagedProvider children={children}>{children}</ManagedProvider>
             </Provider>
           </AuthProvider>
         </QueryClientProvider>
