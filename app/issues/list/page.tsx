@@ -13,7 +13,7 @@ interface Props {
 const IssuesPage = async ({ searchParams }: Props) => {
   const statuses = Object.values(Status);
   const status = statuses.includes(searchParams.status)
-    ? searchParams.status
+    ? { createdAt: "asc" }
     : undefined;
 
   const where = { status };
