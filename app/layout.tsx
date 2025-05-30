@@ -27,11 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body classNames={inter.variable}>
         <QueryClientProvider>
           <AuthProvider>
             <Provider>
-              <ManagedProvider>{children}</ManagedProvider>
+              <ManagedProvider children={children}>{children}</ManagedProvider>
             </Provider>
           </AuthProvider>
         </QueryClientProvider>
