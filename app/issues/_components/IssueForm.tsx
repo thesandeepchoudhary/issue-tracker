@@ -36,9 +36,9 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
       router.push("/issues/list");
       router.refresh();
     } catch (error) {
-      setIsSubmiting(false);
       setError("An unexpected error occured");
     }
+    setIsSubmiting(false);
   });
 
   return (
@@ -65,7 +65,7 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
           render={({ field }) => (
             <SimpleMDE
               placeholder="Description"
-              {...field}
+              {...field.value}
               className="[&>div>div]:bg-[var(--color-background)] [&>div>div]:text-[var(--gray-12)]"
             />
           )}
