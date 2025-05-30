@@ -65,7 +65,7 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
           render={({ field }) => (
             <SimpleMDE
               placeholder="Description"
-              {...field.value}
+              {...field}
               className="[&>div>div]:bg-[var(--color-background)] [&>div>div]:text-[var(--gray-12)]"
             />
           )}
